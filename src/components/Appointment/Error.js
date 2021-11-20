@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { action } from "@storybook/addon-actions/dist/preview";
 
 
-export default function Status(props) {
+export default function Error(props) {
   
  return (
 <main className="appointment__card appointment__card--error">
