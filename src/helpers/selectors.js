@@ -1,6 +1,4 @@
-import React from "react";
-import classNames from "classnames";
-import { action } from "@storybook/addon-actions/dist/preview";
+
 
 export function getAppointmentsForDay(state, day) {
   const appointments = []
@@ -13,7 +11,16 @@ export function getAppointmentsForDay(state, day) {
     if(state.appointments[appID]){appointments.push(state.appointments[appID])}
   })
 
-  console.log(filteredState)
-
   return appointments
+}
+
+export function getInterview(state, interview) {
+
+  if(!interview) return(null)
+
+  const intID = interview.interviewer
+
+  const interviewData = { ...interview, interviewer: state.interviewers[intID]}
+
+  return interviewData
 }

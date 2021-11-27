@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React, { useState } from "react";
+import React from "react";
 import "components/DayListItem.scss"
 
 export default function DayListItem(props) {

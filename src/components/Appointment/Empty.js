@@ -1,7 +1,4 @@
 import React from "react";
-import classNames from "classnames";
-import { action } from "@storybook/addon-actions/dist/preview";
-
 
 export default function Empty(props) {
   
