@@ -6,16 +6,19 @@ import DayList from "./DayList";
 import Appointment from "./Appointment";
 import { getAppointmentsForDay } from "helpers/selectors";
 import { getInterview } from "helpers/selectors";
+import useVisualMode from "hooks/useVisualMode";
+import Show from "./Appointment/Show";
+import Empty from "./Appointment/Empty";
 
 export default function Application(props) {
 
-  
   const [state, setState] = useState({
     day: "Monday",
     days: [],
     appointments: {},
     interviewers: {}
   })
+
 
   useEffect(() => {
     const daysURL = 'http://localhost:8001/api/days'
@@ -35,8 +38,6 @@ export default function Application(props) {
 
   }, [])
 
-  // console.log("interviewers log", state.interviewers)
-
 
   const setDay = day => setState({ ...state, day});
 
@@ -44,6 +45,7 @@ export default function Application(props) {
 
   const schedule = dailyAppointments.map((appointment) => {
     const interview = getInterview(state, appointment.interview)
+
     return(
       <Appointment
         key={appointment.id}
