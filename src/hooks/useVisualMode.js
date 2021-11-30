@@ -7,11 +7,17 @@ export default function useVisualMode(initial){
 
 
 
-  function transition(updateMode) {
-    // const lastMode = mode;
+  function transition(updateMode, replace = false) {
+   
    setMode(updateMode)
+
+   if(replace) {
+    setHistory(prevState => {
+      return(prevState.slice(0, prevState.length-1))
+    })
+   }
    setHistory(prevState => {
-     return([... prevState, updateMode])
+     return([ ...prevState, updateMode])
    })
 
   }
