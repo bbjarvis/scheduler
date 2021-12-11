@@ -52,12 +52,20 @@ export default function Application(props) {
         ...state.appointments,
         [id]: appointment
       };
-      return axios.put(`/api/appointments/${id}`, {interview}).then((res)=> {
+      let isError = false
+      return axios.put(`/api/appointments/${id}`, {interview})
+      .then((res)=> {
       setState({
         ...state,
         appointments
+      })
+
+      return(isError)
+      })
+      .catch((error) => {
+        isError = true
+        return(isError)
       });
-    });
 
   }
   const cancelInterview = (id, interview) => {
@@ -70,12 +78,21 @@ export default function Application(props) {
       ...state.appointments,
       [id]: appointment
     };
-    return axios.delete(`/api/appointments/${id}`).then((res)=> {
+    let isError = false
+
+    return axios.delete(`/api/appointments/${id}`)
+    .then((res)=> {
     setState({
       ...state,
       appointments
+    })
+      return(isError)
+    })
+    .catch((error) => {
+      isError = true
+      return(isError)
     });
-  });
+
 
 }
 
