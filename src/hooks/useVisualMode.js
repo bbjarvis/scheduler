@@ -12,14 +12,9 @@ export default function useVisualMode(initial){
    setMode(updateMode)
 
    if(replace) {
-    setHistory(prevState => {
-      return(prevState.slice(0, prevState.length-1))
-    })
+    setHistory(prev => ([...prev.slice(0, prev.length-1)]))
    }
-   setHistory(prevState => {
-     return([ ...prevState, updateMode])
-   })
-
+   setHistory(prev => ([ ...prev, updateMode]))
   }
 
   function back() {
@@ -28,9 +23,7 @@ export default function useVisualMode(initial){
 
     setMode(history[history.length-2])
 
-    setHistory(prevState => {
-      return(prevState.slice(0, prevState.length-1))
-    })
+    setHistory(prev => [...prev.slice(0, prev.length-1)])
   }
 
   
