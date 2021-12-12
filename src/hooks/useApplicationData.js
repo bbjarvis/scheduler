@@ -98,11 +98,10 @@ export default function useApplicationData(initial){
 
     const spotsArray = state.days.map((today) => {
     if(today.name === day){
-      console.log("spots", today.spots)
 
       add ? spots = today.spots + 1 : spots = today.spots - 1;
       today.spots= spots
-      console.log("spots", today.spots)
+
       return today
 
     }

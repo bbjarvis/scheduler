@@ -57,7 +57,7 @@ export default function Appointment(props) {
   <article className="appointment">
     <Header time={props.time} />
     {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
-    {mode === CREATE && <Form interviewers={props.interviewers} 
+    {mode === CREATE && <Form interviewers={props.interviewers}
       onSave={save} onCancel={back} />}
     {mode === SAVING && <Status message="Saving..."/>}
     {mode === DELETING && <Status message="Deleting..."/>}
