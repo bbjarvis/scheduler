@@ -22,7 +22,7 @@ Once created, selecting the Edit Appointment will take the user back to the Crea
 !["Edit"](https://github.com/bbjarvis/scheduler/blob/master/docs/Edit.png)
 
 Selecting Delete Appointment:
-!["Delete"](https://github.com/bbjarvis/scheduler/blob/master/docs/Delete.png)
+!["Delete"](https://github.com/bbjarvis/scheduler/blob/master/docs/Deleting.png)
 
 Will bring the user to Confirm:
 !["Confirm"](https://github.com/bbjarvis/scheduler/blob/master/docs/Confirm%20Delete.png)
