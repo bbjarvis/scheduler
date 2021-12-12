@@ -10,22 +10,22 @@ The front end of this project is built with React and makes requests to an API t
 This is the Default View (Monday) when loading the app.
 The left side shows all available days, and Spots Remaining for that day.
 The main shows all the appointments for that day:
-!["Default"]()
+!["Default"](https://github.com/bbjarvis/scheduler/blob/master/docs/Default%20View.png)
 
 Click on a (+) icon to Create Appointment for that time slot:
-!["Create"]()
+!["Create"](https://github.com/bbjarvis/scheduler/blob/master/docs/Create%20Appointment.png)
 
 After filling in the Student Name and selecting an Interviewer the user can select "Cancel" to go back, or "Save"
-!["Save"]()
+!["Save"](https://github.com/bbjarvis/scheduler/blob/master/docs/Save.png)
 
 Once created, selecting the Edit Appointment will take the user back to the Create Appointment:
-!["Edit"]()
+!["Edit"](https://github.com/bbjarvis/scheduler/blob/master/docs/Edit.png)
 
 Selecting Delete Appointment:
-!["Delete"]()
+!["Delete"](https://github.com/bbjarvis/scheduler/blob/master/docs/Delete.png)
 
 Will bring the user to Confirm:
-!["Confirm"]()
+!["Confirm"](https://github.com/bbjarvis/scheduler/blob/master/docs/Confirm%20Delete.png)
 
 ## Setup
 
