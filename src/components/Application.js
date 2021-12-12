@@ -52,7 +52,7 @@ export default function Application(props) {
         ...state.appointments,
         [id]: appointment
       };
-      let isError = false
+
       return axios.put(`/api/appointments/${id}`, {interview})
       .then((res)=> {
       setState({
@@ -60,11 +60,11 @@ export default function Application(props) {
         appointments
       })
 
-      return(isError)
+
       })
       .catch((error) => {
-        isError = true
-        return(isError)
+
+        return(Promise.reject(error))
       });
 
   }
@@ -78,7 +78,7 @@ export default function Application(props) {
       ...state.appointments,
       [id]: appointment
     };
-    let isError = false
+
 
     return axios.delete(`/api/appointments/${id}`)
     .then((res)=> {
@@ -86,11 +86,11 @@ export default function Application(props) {
       ...state,
       appointments
     })
-      return(isError)
+
     })
     .catch((error) => {
-      isError = true
-      return(isError)
+
+      return(Promise.reject(error))
     });
 
 

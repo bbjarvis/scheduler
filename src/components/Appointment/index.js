@@ -34,16 +34,16 @@ export default function Appointment(props) {
     transition(SAVING)
 
     props.bookInterview(props.id, interview)
-    .then((isError) => 
-      isError ? transition(ERROR_SAVE, true) : transition(SHOW))
+    .then(() => transition(SHOW))
+    .catch(error => transition(ERROR_SAVE, true))
   }
 
   const deleteItem = (name, interviewer) => {
     transition(DELETING, true)
     
     props.cancelInterview(props.id)
-    .then((isError) => 
-      isError ? transition(ERROR_DELETE, true) : transition(EMPTY))
+    .then(() => transition(EMPTY))
+    .catch(error => transition(ERROR_DELETE, true))
   }
 
   const confirm = () => {
