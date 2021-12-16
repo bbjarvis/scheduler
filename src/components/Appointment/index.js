@@ -33,7 +33,9 @@ export default function Appointment(props) {
     };
     transition(SAVING)
 
-    if(!interview.interviewer || !interview.student) return(transition(ERROR_SAVE, true))
+    if(!interview.interviewer || !interview.student) {
+        return(transition(ERROR_SAVE, true))
+      }
 
       props.bookInterview(props.id, interview)
       .then(() => transition(SHOW))
