@@ -1,10 +1,10 @@
 describe("Navigation", () => {
-  it("should visit root", () => {
+  it("should navigate to Tuesday", () => {
     cy.visit("/");
+  
+    cy.contains("[data-testid=day]", "Tuesday")
+      .click()
+      .should("have.class", "day-list__item--selected")
   });
-  it("should find day that contains 'Tuesday' and click", () => {
-    cy.contains("li", "Tuesday").click()
-    .should("have.css", "background-color", "rgb(242, 242, 242)");
-  })
 
 });
