@@ -7,3 +7,5 @@ The user can save, edit, or delete the appointment and view the entire schedule 
 
 ## Tech Stack:
   React, Cypress, Storybook, Jest
+  
+!["Scheduler"](docs/Scheduler.gif)
