@@ -10,22 +10,22 @@ The front end of this project is built with React and makes requests to an API t
 This is the Default View (Monday) when loading the app.
 The left side shows all available days, and Spots Remaining for that day.
 The main shows all the appointments for that day:
-!["Default"](/scheduler/docs/DefaultView.png)
+!["Default"](/docs/DefaultView.png)
 
 Click on a (+) icon to Create Appointment for that time slot:
-!["Create"](/scheduler/docs/CreateAppointment.png)
+!["Create"](/docs/CreateAppointment.png)
 
 After filling in the Student Name and selecting an Interviewer the user can select "Cancel" to go back, or "Save"
-!["Save"](/scheduler/docs/Save.png)
+!["Save"](/docs/Save.png)
 
 Once created, selecting the Edit Appointment will take the user back to the Create Appointment:
-!["Edit"](/scheduler/docs/Edit.png)
+!["Edit"](/docs/Edit.png)
 
 Selecting Delete Appointment:
-!["Delete"](/scheduler/docs/Deleting.png)
+!["Delete"](/docs/Deleting.png)
 
 Will bring the user to Confirm:
-!["Confirm"](/scheduler/docs/ConfirmDelete.png)
+!["Confirm"](/docs/ConfirmDelete.png)
 
 ## Setup
 
